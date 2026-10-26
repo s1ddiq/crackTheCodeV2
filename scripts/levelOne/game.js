@@ -67,7 +67,8 @@ const clues = [
     "Through the mysteries that lie ahead, a clue needs to be read.",
     "Another secret hides in view, but only those with patience will know what to do.",
     "The answer lies not far away, but you'll need to look without delay.",
-    "Good luck, traveler. 🚬", 
+    "Good luck, traveler. Ades Dementes.",
+    // TODO: Replace with 🚬🚬 
     '',
 ];
 
