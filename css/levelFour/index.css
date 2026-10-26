@@ -1,0 +1,16 @@
+.red-circle, .yellow-circle, .green-circle {
+ width: 1em;
+ height: 1em;
+ background-color: tomato;
+ border-radius: 1em;
+ margin: .395em .325em;
+ cursor: pointer;
+}
+
+.yellow-circle {
+    background-color: orange;
+}
+
+.green-circle {
+    background-color: yellowgreen;
+}

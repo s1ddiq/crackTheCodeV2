@@ -1,0 +1,150 @@
+
+
+body {
+    background-color: #121212;
+    color: #d1d1d1;
+    font-family: 'Fredoka', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-title {
+    font-size: 5em;
+    animation: beforeAfter 1s ease forwards;
+    cursor: pointer;
+}
+/* 
+#main-title:hover::before {
+
+} */
+
+#main-title::after {
+    content: '';
+    animation: dotDot 2s infinite;
+
+}
+#main-title {
+    pointer-events: none;
+    cursor: pointer;
+}
+
+@keyframes dotDot {
+
+    25% {
+        content: '.';
+    }
+
+    50% {
+        content: '. .';
+    }
+
+    75% {
+        content: '.';
+    }
+
+    100% {
+        content: ' ';
+    }
+
+
+
+    /* 50% {
+        content: '. ';
+    }
+
+    55% {
+        content: '. . ';
+    }
+
+    60% {
+        content: '- . ';
+    }
+
+    65% {
+        content: '_ .';
+    }
+
+    70% {
+        content: '- .';
+    }
+    75% {
+        content: '_ .';
+    }
+    80% {
+        content: '- .';
+    }
+
+    85% {
+        content: '_ .';
+    }
+
+    90% {
+        content: '- .';
+    }
+    
+    95% {
+        content: 
+        '_ .';
+    }
+
+    99% {
+        content: '- .';
+    }
+
+    100% {
+        content: ' . .';
+    } */
+}
+
+#entry {
+    animation: disappear 3s ease forwards 20s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+@keyframes disappear {
+    50% {
+        opacity: 0;
+    }
+    
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+#level-one-container {
+    /* opacity: 0; */ /*uncomment for animation sequence*/
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shown {
+    animation: fadeOpacity 1s ease forwards;
+    display: block;
+}
+
+@keyframes fadeOpacity {
+    to {
+        opacity: 1;
+    }
+}
+.hidden {
+    /* transition: all 0.3s ease; */
+    opacity: 0;
+    display: none !important;
+}
+
+

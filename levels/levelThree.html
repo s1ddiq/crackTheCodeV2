@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3 - HELP Unicode</title>
+    <link rel="stylesheet" href="/css/levelThree/game.css">
+    <link rel="stylesheet" href="/css/levelThree/index.css">
+    <link rel="stylesheet" href="/css/keys.css">
+</head>
+<body>
+
+    <audio src="/audio/e.wav" id="eKey"></audio>
+    <audio src="/audio/k.wav" id="kKey"></audio>
+    <audio src="/audio/wrong.mp3" id="wrong"></audio>
+    <audio src="/audio/bg.mp3" id="backgroundMusic"></audio>
+
+    <div id="blurredBG" class="">
+        <div class="inventory " id="inventory">
+            <span>e to close</span>
+        </div>
+    </div>
+
+    <div class="vignette">
+
+    </div>
+    
+        <div class="grid">
+            <div class="cell" id="m">H</div> <!-- Start of the code -->
+            <div class="cell">A</div>
+            <div class="cell">B</div>
+            <div class="cell">C</div>
+            <div class="cell">D</div>
+            <div class="cell" id="a">E</div>
+            <div class="cell">F</div>
+            <div class="cell">G</div>
+            <div class="cell">H</div>
+            <div class="cell" id="i">L</div> <!-- Part of the code -->
+            <div class="cell">I</div>
+            <div class="cell">J</div>
+            <div class="cell">K</div>
+            <div class="cell">L</div>
+            <div class="cell">M</div>
+            <div class="cell">N</div>
+            <div class="cell">O</div>
+            <div class="cell" id="l">P</div> <!-- Part of the code -->
+            <div class="cell">P</div>
+            <div class="cell">Q</div>
+            <div class="cell">R</div>
+            <div class="cell">S</div>
+            <div class="cell">T</div>
+          </div>
+          
+          <div class="notificationEL">
+            <p>You've obtained a key! E to view all keys</p>
+          </div>
+
+          <button id="showMessage" title="Open mailbox">📬<span>(Open Envelope)</span></button>
+
+    <div class="messageBox hide" title="Envelope">
+        <h1 id="encodedTitle" title="HELP">
+            
+            <span style="font-size: 1.3em;" >H</span>ighly 
+            <span style="font-size: 1.3em;" >E</span>ncrypted 
+            <span style="font-size: 1.3em;" >L</span>ost 
+            <span style="font-size: 1.3em;" >P</span>hrase</h1>
+        <p title="Encrypted Text">
+        Up until this point it has been quite a smooth ride hasn't it? <span id="smirkEmoji" title="Smirk Emoji">😏</span><br> See I've now softened you by holding your hand through the challenges. Disprove me by finding my code.
+        </p>
+
+        <div>
+            <input type="text" id="codeEntryL3" placeholder="Enter your code" title="Enter your unicode">
+        </div>
+    </div>
+
+    <script src="/scripts/levelThree/game.js" type="module"></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+    <script src="/scripts/keys.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+ <!-- <div id="insaneContainer" class="shown">
+
+        <img src="images/scroll_top.png" alt="">
+        <div id="insaneInner">
+
+            <button id="playBtn">PLAY</button>
+                
+        </div>
+        <img src="images/scroll_bottom.png" alt="">
+    </div> -->
+<!-- 
+    #insaneContainer {
+        display: flex;
+        flex-direction: column;
+        background: url(/images/scroll_middle.png);
+    }
+    
+    #poem {
+        color: rgb(7, 27, 80);
+        font-size: 1.5em;
+        font-family: "Microsoft Yahei";
+        text-align: left;
+        font-style: italic;
+    }
+    
+    #insaneContainer > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(scroll_middle.png);
+    }
+    
+    
+      img[src="vector.png"] {
+        position: absolute;
+        top: 0;
+        opacity: 0.3;
+        pointer-events: none;
+      } -->

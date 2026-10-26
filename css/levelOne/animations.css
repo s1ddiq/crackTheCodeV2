@@ -1,0 +1,31 @@
+@keyframes revealSelfBg {
+    50% {
+        display: block;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+
+@keyframes revealSelfGr{
+    50% {
+        display: block;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
+
+@keyframes goDown {
+    50% {
+        transform: translateY(-5000%);
+    }
+
+    100% {
+        /* display: none; */
+        transform: translateY(-5000%);
+    }
+}
+
+/* animations.css */

@@ -1,0 +1,46 @@
+#clue-title {
+    letter-spacing: 2px;
+    font-size: 3em;
+}
+
+.clue-p {
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.clue-p.fade-out {
+    opacity: 0;
+  }
+  
+  
+
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cube-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    opacity: 0;
+    transition: 0.3s ease;
+    position: absolute;
+    font-size: 3em;
+}
+
+.cube:hover {
+    opacity: 0.2;
+    filter: brightness(2);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - Your journey begins</title>
+    <link rel="stylesheet" href="/css/levelOne/index.css">
+    <link rel="stylesheet" href="/css/levelOne/game.css">
+    <link rel="stylesheet" href="/css/levelOne/animations.css">
+    <link rel="stylesheet" href="/css/keys.css">
+</head>
+<body>
+    <div id="blurredBG" class="">
+        <div class="inventory " id="inventory">
+            <span>e to close</span>
+        </div>
+    </div>
+    <audio src="/audio/merry_christmas.ogg" id="backgroundAudio" hidden></audio>
+
+    <div id="entry" class=""> <!--remove hidden for seuqnec-->
+        
+        <h1 id="main-title">
+            . 
+        </h1>
+        
+        <p id="hidden-clue"><span style="font-weight:bold;">TIP:</span> Your mouse is the most valuable asset. </p>
+        <button id="playSound" style="background: transparent; border:0;font-size:3em; cursor:pointer; position:absolute; top: 0; left:0">🔈</button> 
+
+</div>
+
+<div id="level-one-container" class="hidden"> <!--add hidden for seuqnce-->
+<h1 style="color:white" id="clue-title"></h1>
+<p id="clue-2" class="clue-p">Through the mysteries that lie ahead, a clue needs to be read.</p>
+<p id="clue-3" class="clue-p"></p>
+
+</div>
+
+<div class="game-container">
+    <div class="cube-container">
+        <div class="cube" style="position:absolute; top: 50%; left:34%"> 🗝</div>
+    </div>
+</div>
+
+
+
+    <script src="/scripts/levelOne/game.js"></script>
+    <script src="/scripts/levelOne/scripts.js"></script>
+    <script src="/scripts/keys.js" type="module"></script>
+</body>
+</html>

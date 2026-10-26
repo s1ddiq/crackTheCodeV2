@@ -1,0 +1,24 @@
+.sBtn:hover {
+    /* background-color: #a37942; Change background on hover */
+    color: white; /* Invert the text color */
+    transform: scale(1.1); /* Slight zoom effect */
+    background-color: #a37942;
+    overflow: hidden;
+}
+
+.sBtn::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: #a379428a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: 2s ease;
+
+}
+.sBtn:hover::before {
+    width: 50%;
+    left: 100%;
+}

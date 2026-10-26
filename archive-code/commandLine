@@ -1,0 +1,118 @@
+function initiateGame() {
+
+    const body = document.body;
+    const terminalWindow = document.getElementById('terminal-window');
+    const terminalHeader = document.getElementById('terminal-header');
+    const terminalBody = document.getElementById('terminal-body');
+    const commandInput = document.getElementById('commandInput');
+    const lineMarker = document.getElementById('lineMarker');
+    let userIPAddress = '192.168.0.1';
+    let botIPAddress = '172.16.0.1';
+
+    let packetSentToBot = false;
+
+    let IPMatch = /(\b25[0-5]|\b2[0-4][0-9]|\b1[0-9][0-9]|\b[0-9]{1,2})\.(\b25[0-5]|\b2[0-4][0-9]|\b1[0-9][0-9]|\b[0-9]{1,2})\.(\b25[0-5]|\b2[0-4][0-9]|\b1[0-9][0-9]|\b[0-9]{1,2})\.(\b25[0-5]|\b2[0-4][0-9]|\b1[0-9][0-9]|\b[0-9]{1,2})\b/;
+    let containsIPAddress;
+
+    // function submitCommand(command) {
+
+    // }
+
+
+    function loadEasterEgg() {
+        const colors = ['tomato', 'orange', 'yellowgreen'];
+        const redCircle = document.getElementById('red-circle');
+        const yellowCircle = document.getElementById('yellow-circle');
+        const greenCircle = document.getElementById('green-circle');
+        const circles = document.querySelectorAll('.circle');
+
+        circles.forEach(circle => {
+            circle.addEventListener('click', function() {
+                circle.style.backgroundColor = `${colors[Math.floor(Math.random() * colors.length)]}` // picks a random color from the color array
+            })
+        })
+    }
+
+    loadEasterEgg();
+    function autoScroll() {
+        terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+
+    function displayResponse(cmd) {
+        const terminalResponse = document.createElement('div');
+        terminalResponse.className = 'terminal-response';
+        
+        // Split the command into parts: [command, argument]
+        const parts = cmd.trim().split(' ');
+        const command = parts[0]; // First word is the command
+        const argument = parts[1]; // Second word (if any) is the argument
+        
+        // Check if the argument contains a valid IP
+        containsIPAddress = IPMatch.test(argument || '');
+        
+        switch (command) {
+            case 'help':
+                terminalResponse.innerHTML = `
+                <p>
+                Welcome to TERMINAL One! Shortly, you will be tasked with finding critical information to proceed to L5...
+                </p>
+                
+                <h2>Command List:</h2>
+                <p>
+                help <br>
+                send <br>
+                connect <br>
+                respond <br>
+                trace <br>
+                config
+                </p>
+                `;
+                break;
+                
+                case 'send':
+                    if (containsIPAddress) {
+                        const matchedIP = argument.match(IPMatch)[0]; // Extract the matched IP
+                        terminalResponse.innerHTML = `
+                        <p>
+                        Sending packet to ${matchedIP}
+                        </p>
+                        `;
+                        packetSentToBot = true;
+                    } else {
+                        terminalResponse.innerHTML = `
+                        <p>
+                        Invalid or missing IP address. Please provide a valid IP (e.g., "send 192.168.0.1").
+                        </p>
+                        `;
+                    }
+                    break;
+                    
+                    default:
+                        lineMarker.style.color = 'red';
+                        setTimeout(() => {
+                            lineMarker.style.color = 'white';
+                        }, 500);
+                        terminalResponse.innerHTML = `
+                        <p>
+                        Invalid command. Type <i style="color:#006eff;cursor:pointer">HELP</i> for a list of commands.
+                        </p>
+                        `;
+                        break;
+                    }
+                    terminalBody.appendChild(terminalResponse);
+                    autoScroll();
+                }
+                
+                
+                terminalBody.addEventListener('keydown', event => {
+                    event.key === 'Enter' ? displayResponse(commandInput.value) : null; // displays response based on what the user has written
+            event.key === 'Enter' ? commandInput.value = '' : null; // clears input after entry
+        })
+    }
+    
+    initiateGame();
+
+
+
+    // ARCHIVED
+    //  commandInput.value.includes(IPAddress) ? console.log('Ip address') : console.log('does not include ip address');

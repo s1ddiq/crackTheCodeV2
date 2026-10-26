@@ -1,0 +1,131 @@
+
+/* IMPORTS */
+
+body {
+    background-color: #171717;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'VT323';
+    flex-direction: column;
+}
+
+.terminal-window {
+    width: 50%;
+    height: 50%;
+    background-color: #0C0C0C;
+    border-radius: 8px;
+    overflow-y: scroll;
+}
+
+.terminal-window::-webkit-scrollbar {
+    display: none;
+}
+
+.terminal-header {
+    display: flex;
+    border-radius: 8px 8px 0 0;
+    justify-content: start;
+    background-color: rgb(32, 32, 32);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    
+}
+
+.terminal-body {
+    color: white;
+    padding: 2px 1em;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+}
+
+.terminal-body div {
+    display: flex;
+}
+
+.terminal-response {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+/* SPECIFIC ELEMENTS */
+#commandInput {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #006eff;
+    width: 80%;
+    display: inline;
+    cursor: pointer;
+    margin-left: 2px;
+    font-size: 1.2em;
+}
+
+#lineMarker {
+    font-size: 1.3em;
+}
+
+.highlightBlue {
+    color: #006eff;
+}
+
+.highlightRed {
+    color: red;
+}
+
+.textSpacing {
+    letter-spacing: 2px;
+}
+
+
+.fade {
+    transition: all 1s ease;
+    opacity: 0;
+    
+}
+
+
+
+
+#title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5em;
+    /* background-color: #006eff; */
+    font-size: 3em;
+    font-family:fantasy;
+    text-shadow: 1px 2.3px rgb(107, 46, 206);
+    border-radius: 8px;
+    color: white;
+   
+    background: repeating-linear-gradient(20deg, #0044ff 0, #006eff, #5762ff);
+    background-clip: text;
+    pointer-events: none;
+    -webkit-background-clip: text;
+}
+
+/* background: repeating-linear-gradient(180deg, #0000 0, #0000004d, #0000); */
+
+#noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.009;
+    z-index: -999999;
+    pointer-events: none;
+   
+}
+
+#noise img {
+    width: 100vw;
+    height: 100vh;
+}

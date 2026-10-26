@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 2 - The Mirror Room</title>
+    <link rel="stylesheet" href="/css/levelTwo/game.css">
+    <link rel="stylesheet" href="/css/levelTwo/animations.css">
+    <link rel="stylesheet" href="/css/keys.css">
+</head>
+<body>
+    <div id="blurredBG" class="">
+        <div class="inventory " id="inventory">
+            <span>e to close</span>
+        </div>
+    </div>
+    <div class="mirror-room">
+        <div class="mirror" id="mirror-1" data-hidden-message="Secret Code: 2000"></div>
+        <div class="mirror" id="mirror-2" data-hidden-message="Keep Looking..."></div>
+        <div class="mirror" id="mirror-3" data-hidden-message="Not Quite..."></div>
+    </div>
+
+    <div class="message-display" id="message-display">A secret lies behind glass, find them to get past.</div>
+
+
+    <audio src="/audio/correct.mp3" id="correctSound"></audio>
+    <audio src="/audio/wrong.mp3" id="wrongSound"></audio>
+    <div id="inputBoxContainer">
+        <input type="text" id="inputBox">
+    </div>
+    <script src="/scripts/levelTwo/index.js"></script>
+    <script src="/scripts/levelTwo/scripts.js"></script>
+    <script src="/scripts/keys.js" type="module"></script>
+</body>
+</html>
