@@ -1,77 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>crackTheCode V2</title>
-    <link rel="stylesheet" href="css/index/index.css">
-</head>
+    <link rel="stylesheet" href="css/index/index.css" />
+  </head>
 
-<body>
-
-
+  <body>
     <div id="torch">
-
-        <img src="/images/torch.gif" alt="">
-        <p style="position: absolute; font-size: 1em; bottom: 75px;">v2.4.0</p>
+      <img src="./images/torch.gif" alt="" />
+      <p style="position: absolute; font-size: 1em; bottom: 75px">v2.4.0</p>
     </div>
-    
-    <div id="startScreen">
-        <!--  -->
-        <button id="playBtn" class="sBtn" onclick="playGame()">PLAY</button>
-        <button id="creditsBtn" class="sBtn" onclick="openCredits()" >CREDITS</button>
-        <button id="updatesBtn" class="sBtn" onclick="openUpdates()">UPDATES</button>
 
+    <div id="startScreen">
+      <!--  -->
+      <button id="playBtn" class="sBtn" onclick="playGame()">PLAY</button>
+      <button id="creditsBtn" class="sBtn" onclick="openCredits()">
+        CREDITS
+      </button>
+      <button id="updatesBtn" class="sBtn" onclick="openUpdates()">
+        UPDATES
+      </button>
     </div>
 
     <div id="playScreen" class="screen hidden" tabindex="0">
-        <button class="closeScreen">⬅</button>
-        <h1>Welcome to Crack the Code V2</h1>
-        <p>If you haven't solved V1, we recommend going back to complete it before continuing.
-        In this game, you will be tasked with uncovering hidden clues, solving cryptic puzzles, and decoding complex patterns to advance through each level.
-        Sharpen your mind—each step will test your logic, creativity, and attention to detail. Are you ready?
-        </p>
-        <h2 id="proceed">enter to proceed</h2>
+      <button class="closeScreen">⬅</button>
+      <h1>Welcome to Crack the Code V2</h1>
+      <p>
+        If you haven't solved V1, we recommend going back to complete it before
+        continuing. In this game, you will be tasked with uncovering hidden
+        clues, solving cryptic puzzles, and decoding complex patterns to advance
+        through each level. Sharpen your mind—each step will test your logic,
+        creativity, and attention to detail. Are you ready?
+      </p>
+      <h2 id="proceed">enter to proceed</h2>
     </div>
-    
+
     <div id="creditsScreen" class="screen hidden">
-        <button class="closeScreen">⬅</button>
-        <p id="creditsParagraph">Created By
-            <span class="creditsPTitle">Siddiq - The Mastermind Behind the Codes</span>
-            <br>
-            <br>
-            <span class="creditsPTitle">Special Thanks</span>
-            <br>
-            to random stackoverflow threads, <br>
-            to my patience
-            to widdle // might remove soon
-            <span class="creditsPTitle">Directors</span>
-            <br>
-            Thomas Family - 
-            <span class="creditsPTitle">Ideas</span>
-            <a href="https://codepen.io/bulanmaster/pen/poERRG">HACKSYS </a>
-            
-        
+      <button class="closeScreen">⬅</button>
+      <p id="creditsParagraph">
+        Created By
+        <span class="creditsPTitle"
+          >Siddiq - The Mastermind Behind the Codes</span
+        >
+        <br />
+        <br />
+        <span class="creditsPTitle">Special Thanks</span>
+        <br />
+        to random stackoverflow threads, <br />
+        to my patience to widdle // might remove soon
+        <span class="creditsPTitle">Directors</span>
+        <br />
+        Thomas Family -
+        <span class="creditsPTitle">Ideas</span>
+        <a href="https://codepen.io/bulanmaster/pen/poERRG">HACKSYS </a>
+      </p>
     </div>
     <div id="updatesScreen" class="screen hidden">
-        <button class="closeScreen">⬅</button>
-        <p style="font-size: 2em;">UPDATES:</p>
-        <p>v2.1.0</p>
-        <p>9.27.24 - HUST system</p>
-        <p>9.28.24 - implemented smart api for mirror room (NO SPOILERS :D)</p>
-        <p>9.29.24:10.3.24 - bug fixes, new levels</p>
-        <p>10.4.24 - loading screen for level 1</p>
-        <p>10.23.24 - level three updates</p>
-        <p>11.26.24 - finished level three</p>
-        <p>11.25.24 - made level harder, changed "C" to view inventory to "E", working on not allowing the user to open inventory while in the envelope</p>
-        <p>11.27.24 - scrolled l4 terminal into view & also inserts element BEFORE the first element :> (so happy to fix that rn lol)</p>
-        <p>11.27.24 - finished level 4 still has to be polished lmao</p>
-    
+      <button class="closeScreen">⬅</button>
+      <p style="font-size: 2em">UPDATES:</p>
+      <p>v2.1.0</p>
+      <p>9.27.24 - HUST system</p>
+      <p>9.28.24 - implemented smart api for mirror room (NO SPOILERS :D)</p>
+      <p>9.29.24:10.3.24 - bug fixes, new levels</p>
+      <p>10.4.24 - loading screen for level 1</p>
+      <p>10.23.24 - level three updates</p>
+      <p>11.26.24 - finished level three</p>
+      <p>
+        11.25.24 - made level harder, changed "C" to view inventory to "E",
+        working on not allowing the user to open inventory while in the envelope
+      </p>
+      <p>
+        11.27.24 - scrolled l4 terminal into view & also inserts element BEFORE
+        the first element :> (so happy to fix that rn lol)
+      </p>
+      <p>11.27.24 - finished level 4 still has to be polished lmao</p>
     </div>
 
     <script src="/scripts/index/index.js"></script>
     <script src="/scripts/index/game.js"></script>
     <script src="/scripts/index/scripts.js"></script>
-
-</body>
+  </body>
 </html>

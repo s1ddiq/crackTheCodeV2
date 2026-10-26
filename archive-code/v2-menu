@@ -12,7 +12,7 @@
     #insaneContainer {
         display: flex;
         flex-direction: column;
-        background: url(/images/scroll_middle.png);
+        background: url(./images/scroll_middle.png);
     }
     
     #poem {
